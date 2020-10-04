@@ -1,26 +1,28 @@
-# Документация API EcoView
-Все запросы к API выполняются к `https://ecoview-spaceapps.herokuapp.com/api/*`, например `https://ecoview-spaceapps.herokuapp.com/api/get_stations`
+# Eco View Website
+https://ecoview-spaceapps.000webhostapp.com/
+
+# API EcoView website
+All API requests are going to `https://ecoview-spaceapps.herokuapp.com/api/*`, for example `https://ecoview-spaceapps.herokuapp.com/api/get_stations`
 
 ### get_stations
-Не принимает входных значений.
-Возвращает массив `Array` из  объектов `Object`.
-Каждый объект массива состоит из:
+Response with array `Array` with objects `Object`.
+Every object of array has:
 
- - _id - *уникальный id объекта в базе данных MongoDB*
- - name - *Индексируемое название станции*
+ - _id - *unique id of object in MongoDB database*
+ - name - *Station's indexed name*
  - friendlyNames:
-   - name_en - *Дружественное название локации на английском языке*
-   - name_ru - *Дружественное название локации на русском языке*
- - data - *Индекс качества воздуха*
- - date - *timestamp последнего обновления данных*
+   - name_en - *Friendly name of location on English*
+   - name_ru - *Friendly name of location on Russian*
+ - data - *Air quality index*
+ - date - *timestamp of last update of station data*
 ### get_station
-Принимает входное значение `name` в формате query `(api/get_station?name=station_name)`
-`name` - индексируемое название станции 
-Возвращает объект `Object`, состоящий из:
- - _id - *уникальный id объекта в базе данных MongoDB*
- - name - *Индексируемое название станции*
+Accepts string `name` in a format of query `(api/get_station?name=station_name)`
+`name` - station's indexed name 
+Response with object `Object`, that has:
+ - _id - *unique id of object in MongoDB database*
+ - name - *Station's indexed name*
  - friendlyNames:
-   - name_en - *Дружественное название локации на английском языке*
-   - name_ru - *Дружественное название локации на русском языке*
- - data - *Индекс качества воздуха*
- - date - *timestamp последнего обновления данных*
+   - name_en - *Friendly name of location on English*
+   - name_ru - *Friendly name of location on Russian*
+ - data - *Air quality index*
+ - date - *timestamp of last update of station data*
